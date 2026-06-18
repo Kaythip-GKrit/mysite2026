@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genshin Impact 2026 - Step into a Vast Magical World</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CSS RESET & VARIABLES */
+        :root {
+            --color-primary: #ecd093; /* Gold */
+            --color-primary-glow: rgba(236, 208, 147, 0.4);
+            --color-bg-dark: #0b0c16;
+            --color-bg-card: rgba(18, 20, 38, 0.75);
+            --color-text-light: #f3f4f6;
+            --color-text-muted: #9ca3af;
+            
+            /* Elements colors */
+            --anemo-color: #3fe0cd;
+            --pyro-color: #ff5a36;
+            --electro-color: #d156ff;
+            --cryo-color: #56cdff;
+            
+            --active-element-color: var(--anemo-color);
+            
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--color-bg-dark);
+            color: var(--color-text-light);
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(18, 20, 38, 0.8) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(20, 15, 30, 0.8) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        /* CUSTOM SCROLLBAR */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--color-bg-dark);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--color-primary);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4b574;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.5rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(11, 12, 22, 0.95), rgba(11, 12, 22, 0));
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(236, 208, 147, 0.05);
+            transition: var(--transition-smooth);
+        }
+
+        header.scrolled {
+            padding: 1rem 4rem;
+            background: rgba(11, 12, 22, 0.95);
+            border-bottom: 1px solid rgba(236, 208, 147, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-family: 'Cinzel', serif;
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--color-primary);
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px var(--color-primary-glow);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-primary);
+            box-shadow: 0 0 10px var(--color-primary-glow);
+            animation: spin 20s linear infinite;
+        }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: var(--transition-smooth);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-primary);
+            box-shadow: 0 0 8px var(--color-primary);
+            transition: var(--transition-smooth);
+        }
+
+        nav a:hover {
+            color: var(--color-primary);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, #ecd093 0%, #c5a663 100%);
+            color: #0b0c16;
+            border: none;
+            padding: 0.7rem 1.8rem;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 0 15px rgba(236, 208, 147, 0.3);
+            transition: var(--transition-smooth);
+            text-decoration: none;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(236, 208, 147, 0.6);
+            background: linear-gradient(135deg, #f3dbab 0%, #d8b874 100%);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 6rem;
+            background: linear-gradient(rgba(11, 12, 22, 0.4), rgba(11, 12, 22, 0.85)), 
+                        url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1920') no-repeat center center/cover;
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(to top, var(--color-bg-dark), transparent);
+            z-index: 2;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            z-index: 10;
+            animation: fadeInL 1.2s ease-out;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+            border: 1px solid var(--color-primary);
+            padding: 0.4rem 1rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border-radius: 20px;
+            background-color: rgba(236, 208, 147, 0.05);
+            box-shadow: 0 0 10px rgba(236, 208, 147, 0.1);
+        }
+
+        .hero-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3.8rem;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            color: #fff;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            font-weight: 900;
+        }
+
+        .hero-title span {
+            color: var(--color-primary);
+            text-shadow: 0 0 15px rgba(236, 208, 147, 0.3);
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.8rem 2rem;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            cursor: pointer;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            backdrop-filter: blur(5px);
+            transition: var(--transition-smooth);
+            text-decoration: none;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* HERO FLOATING CHARACTER */
+        .hero-character-wrapper {
+            position: absolute;
+            right: 5%;
+            bottom: 5%;
+            height: 85vh;
+            width: 45%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            z-index: 5;
+            animation: fadeInR 1.5s ease-out;
+        }
+
+        .hero-character-img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.6));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeInL {
+            0% { opacity: 0; transform: translateX(-50px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes fadeInR {
+            0% { opacity: 0; transform: translateX(50px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        /* SECTION COMMON STYLES */
+        section {
+            padding: 8rem 6rem;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-subtitle {
+            font-family: 'Cinzel', serif;
+            color: var(--color-primary);
+            font-size: 0.9rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+            display: block;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .section-divider {
+            width: 150px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+            margin: 1.2rem auto 0;
+            position: relative;
+        }
+
+        .section-divider::before {
+            content: '✦';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--color-primary);
+            background-color: var(--color-bg-dark);
+            padding: 0 8px;
+            font-size: 0.8rem;
+        }
+
+        /* CHARACTER SHOWCASE SECTION */
+        .showcase {
+            background-color: #080911;
+            overflow: hidden;
+        }
+
+        /* Glow Backdrop that changes dynamically based on active element */
+        .element-glow {
+            position: absolute;
+            top: 50%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--active-element-color) 0%, transparent 70%);
+            opacity: 0.15;
+            filter: blur(50px);
+            pointer-events: none;
+            transition: var(--transition-smooth);
+            z-index: 1;
+        }
+
+        .showcase-container {
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Left Side: Character selector tabs */
+        .char-tabs {
+            flex: 0 0 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .char-tab-btn {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 1.2rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            transition: var(--transition-smooth);
+            text-align: left;
+        }
+
+        .char-tab-btn:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateX(10px);
+        }
+
+        .char-tab-btn.active {
+            background: rgba(236, 208, 147, 0.08);
+            border-color: var(--color-primary);
+            box-shadow: 0 0 20px rgba(236, 208, 147, 0.1);
+        }
+
+        .tab-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+            background-color: #121426;
+            transition: var(--transition-smooth);
+        }
+
+        .char-tab-btn.active .tab-avatar {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 10px var(--color-primary-glow);
+        }
+
+        .tab-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tab-info-text h4 {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 0.2rem;
+        }
+
+        .tab-info-text span {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .tab-info-text .anemo { color: var(--anemo-color); }
+        .tab-info-text .pyro { color: var(--pyro-color); }
+        .tab-info-text .electro { color: var(--electro-color); }
+        .tab-info-text .cryo { color: var(--cryo-color); }
+
+        /* Right Side: Active Character Info Card */
+        .char-display-card {
+            flex: 1;
+            background: var(--color-bg-card);
+            border: 1px solid rgba(236, 208, 147, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            display: flex;
+            min-height: 520px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(15px);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+        }
+
+        .char-display-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(circle at right center, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .char-card-details {
+            flex: 1;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .char-element-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            color: var(--active-element-color);
+            transition: var(--transition-smooth);
+        }
+
+        .char-element-badge i {
+            font-size: 1.2rem;
+        }
+
+        .char-name {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .char-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+        }
+
+        .char-meta span strong {
+            color: #fff;
+        }
+
+        .char-bio {
+            color: #d1d5db;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        /* Stats progress bars */
+        .char-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: auto;
+        }
+
+        .stat-row {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .stat-label-container {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat-bar-bg {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .stat-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--color-primary), var(--active-element-color));
+            border-radius: 3px;
+            width: 0; /* Animated dynamically by JS */
+            transition: width 1s ease-out;
+            box-shadow: 0 0 8px var(--active-element-color);
+        }
+
+        /* Character Visual display */
+        .char-card-visual {
+            flex: 0 0 320px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .char-main-image {
+            max-height: 120%;
+            max-width: 150%;
+            object-fit: contain;
+            position: absolute;
+            bottom: -50px;
+            filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.7));
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform: scale(0.9);
+            opacity: 0;
+        }
+
+        .char-main-image.active {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        /* GAME FEATURES SECTION */
+        .features {
+            background-color: var(--color-bg-dark);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .feature-card {
+            background: rgba(18, 20, 38, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(236, 208, 147, 0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(236, 208, 147, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-icon-wrapper {
+            width: 70px;
+            height: 70px;
+            background: rgba(236, 208, 147, 0.05);
+            border: 1px solid rgba(236, 208, 147, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            color: var(--color-primary);
+            font-size: 1.8rem;
+            transition: var(--transition-smooth);
+            box-shadow: 0 0 15px rgba(236, 208, 147, 0.05);
+        }
+
+        .feature-card:hover .feature-icon-wrapper {
+            background: var(--color-primary);
+            color: #0b0c16;
+            box-shadow: 0 0 25px var(--color-primary-glow);
+            transform: rotateY(180deg);
+        }
+
+        .feature-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .feature-card p {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* FLOATING MUSIC PLAYER */
+        .music-player {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999;
+            background: rgba(11, 12, 22, 0.85);
+            border: 1px solid rgba(236, 208, 147, 0.2);
+            border-radius: 30px;
+            padding: 0.5rem 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: var(--transition-smooth);
+        }
+
+        .music-player:hover {
+            border-color: var(--color-primary);
+            box-shadow: 0 10px 35px rgba(236, 208, 147, 0.25);
+        }
+
+        .music-disk {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 2px solid var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #121426;
+            color: var(--color-primary);
+            font-size: 0.9rem;
+            animation: spin 5s linear infinite;
+            animation-play-state: paused;
+        }
+
+        .music-player.playing .music-disk {
+            animation-play-state: running;
+        }
+
+        .music-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .music-btn {
+            background: none;
+            border: none;
+            color: var(--color-text-light);
+            cursor: pointer;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            transition: var(--transition-smooth);
+        }
+
+        .music-btn:hover {
+            color: var(--color-primary);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .music-info {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--color-text-muted);
+            letter-spacing: 0.5px;
+            max-width: 120px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* TRAILER VIDEO MODAL */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition-smooth);
+        }
+
+        .modal.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-container {
+            width: 90%;
+            max-width: 960px;
+            aspect-ratio: 16/9;
+            background: #000;
+            border: 2px solid var(--color-primary);
+            box-shadow: 0 0 50px rgba(236, 208, 147, 0.3);
+            position: relative;
+            transform: scale(0.8);
+            transition: var(--transition-smooth);
+        }
+
+        .modal.open .modal-container {
+            transform: scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: -45px;
+            right: 0;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .modal-close:hover {
+            color: var(--color-primary);
+            transform: rotate(90deg);
+        }
+
+        .modal iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* REGIONS SECTION */
+        .regions {
+            background-color: #05060b;
+        }
+
+        .regions-slider {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            padding: 1.5rem 0.5rem;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: thin;
+        }
+
+        .region-card {
+            flex: 0 0 320px;
+            height: 450px;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            scroll-snap-align: start;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .region-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-primary);
+            box-shadow: 0 15px 35px rgba(236, 208, 147, 0.15);
+        }
+
+        .region-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .region-card:hover .region-bg {
+            transform: scale(1.1);
+        }
+
+        .region-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(11, 12, 22, 0.95) 0%, rgba(11, 12, 22, 0.4) 50%, transparent 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2.2rem;
+            transition: var(--transition-smooth);
+        }
+
+        .region-card:hover .region-overlay {
+            background: linear-gradient(to top, rgba(11, 12, 22, 0.98) 0%, rgba(11, 12, 22, 0.6) 50%, transparent 100%);
+        }
+
+        .region-element {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .region-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 0.6rem;
+        }
+
+        .region-card p {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            line-height: 1.5;
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+        }
+
+        .region-card:hover p {
+            height: 70px;
+            opacity: 1;
+            margin-top: 0.5rem;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #030407;
+            padding: 5rem 6rem;
+            border-top: 1px solid rgba(236, 208, 147, 0.05);
+            text-align: center;
+        }
+
+        .footer-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .footer-links a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-primary);
+        }
+
+        .footer-socials {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-text-muted);
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        .social-icon:hover {
+            color: var(--color-primary);
+            border-color: var(--color-primary);
+            background-color: rgba(236, 208, 147, 0.05);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(236, 208, 147, 0.15);
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.3);
+            letter-spacing: 0.5px;
+            line-height: 1.6;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 1024px) {
+            header { padding: 1.5rem 2.5rem; }
+            section { padding: 6rem 2.5rem; }
+            .hero { padding: 0 3rem; }
+            .hero-title { font-size: 3rem; }
+            .hero-character-wrapper { width: 50%; right: 2%; }
+            .showcase-container { flex-direction: column; }
+            .char-tabs { flex: 1; width: 100%; flex-direction: row; overflow-x: auto; padding-bottom: 1rem; }
+            .char-tab-btn { flex: 0 0 220px; }
+            .char-display-card { flex-direction: column; padding: 2rem; min-height: auto; }
+            .char-card-visual { height: 250px; flex: 1; overflow: hidden; }
+            .char-main-image { bottom: -20px; max-height: 120%; }
+            .features-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            nav { display: none; }
+            .hero-character-wrapper { display: none; }
+            .hero-content { max-width: 100%; text-align: center; display: flex; flex-direction: column; align-items: center; }
+            .hero-btns { flex-direction: column; width: 100%; max-width: 300px; }
+            .btn-secondary { justify-content: center; }
+            .section-title { font-size: 2.2rem; }
+            .char-name { font-size: 2.2rem; }
+            .char-meta { flex-direction: column; gap: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SCROLLING HEADER -->
+    <header id="main-header">
+        <a href="#" class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-compass"></i>
+            </div>
+            <span class="logo-text">GENSHIN 2026</span>
+        </a>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#showcase">Characters</a>
+            <a href="#regions">Regions</a>
+            <a href="#features">Features</a>
+        </nav>
+        <button class="cta-btn" onclick="openModal()">Play Free</button>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <span class="hero-tag">Teyvat Chapter</span>
+            <h1 class="hero-title">Step Into a Vast <span>Magical World</span> of Adventure</h1>
+            <p class="hero-desc">
+                Embark on a journey across Teyvat to find your lost sibling and seek answers from the Seven Archons of the elemental gods. Explore this wondrous world, join forces with a diverse range of characters, and unravel the countless mysteries that lie ahead...
+            </p>
+            <div class="hero-btns">
+                <button class="cta-btn" style="padding: 1rem 2.5rem; font-size: 1rem;" onclick="openModal()">Explore Now</button>
+                <button class="btn-secondary" onclick="openModal()">
+                    <i class="fa-solid fa-circle-play"></i> Watch Trailer
+                </button>
+            </div>
+        </div>
+        <div class="hero-character-wrapper">
+            <!-- Traveler / Anime-inspired transparent PNG -->
+            <img src="https://i.imgur.com/vHq10F1.png" alt="Traveler" class="hero-character-img" id="hero-char-img">
+        </div>
+    </section>
+
+    <!-- CHARACTER SHOWCASE SECTION -->
+    <section class="showcase" id="showcase">
+        <div class="element-glow" id="active-glow"></div>
+        <div class="section-header">
+            <span class="section-subtitle">Meet the Travelers</span>
+            <h2 class="section-title">Playable Characters</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="showcase-container">
+            <!-- Left: Character selection tabs -->
+            <div class="char-tabs">
+                <button class="char-tab-btn active" onclick="selectCharacter('traveler')">
+                    <div class="tab-avatar">
+                        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/08/genshin-impact-traveler-featured-image.jpg" alt="Traveler">
+                    </div>
+                    <div class="tab-info-text">
+                        <h4>Traveler</h4>
+                        <span class="anemo">Anemo (Wind)</span>
+                    </div>
+                </button>
+
+                <button class="char-tab-btn" onclick="selectCharacter('hutao')">
+                    <div class="tab-avatar">
+                        <img src="https://genshinfans.com/cdn/shop/files/Hu-Tao-Figure_670x.jpg?v=1716625065" alt="Hu Tao">
+                    </div>
+                    <div class="tab-info-text">
+                        <h4>Hu Tao</h4>
+                        <span class="pyro">Pyro (Fire)</span>
+                    </div>
+                </button>
+
+                <button class="char-tab-btn" onclick="selectCharacter('raiden')">
+                    <div class="tab-avatar">
+                        <img src="https://i2.wp.com/images.genshin-builds.com/genshin/characters/raiden_shogun/image.png?strip=all&quality=100" alt="Raiden Shogun">
+                    </div>
+                    <div class="tab-info-text">
+                        <h4>Raiden Shogun</h4>
+                        <span class="electro">Electro (Lightning)</span>
+                    </div>
+                </button>
+
+                <button class="char-tab-btn" onclick="selectCharacter('ayaka')">
+                    <div class="tab-avatar">
+                        <img src="https://static.wikia.nocookie.net/gensin-impact/images/0/01/Kamisato_Ayaka_Card.png/revision/latest?cb=20210607100828" alt="Kamisato Ayaka">
+                    </div>
+                    <div class="tab-info-text">
+                        <h4>Kamisato Ayaka</h4>
+                        <span class="cryo">Cryo (Ice)</span>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Right: Display Card -->
+            <div class="char-display-card" id="char-card">
+                <div class="char-card-details">
+                    <div class="char-element-badge" id="char-element">
+                        <i class="fa-solid fa-wind"></i> <span>Anemo / Wind</span>
+                    </div>
+                    <h3 class="char-name" id="char-name">Traveler</h3>
+                    <div class="char-meta">
+                        <span>Weapon: <strong id="char-weapon">Sword</strong></span>
+                        <span>Region: <strong id="char-region">Outlander</strong></span>
+                    </div>
+                    <p class="char-bio" id="char-bio">
+                        A traveler from another world who had their only kin taken away, forcing them to embark on a journey across Teyvat to find the Seven Archons. Possesses the unique ability to command elements without a Vision.
+                    </p>
+
+                    <!-- Animated Stats -->
+                    <div class="char-stats">
+                        <div class="stat-row">
+                            <div class="stat-label-container">
+                                <span>Attack Power</span>
+                                <span id="stat-val-atk">85%</span>
+                            </div>
+                            <div class="stat-bar-bg">
+                                <div class="stat-bar-fill" id="bar-atk" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="stat-row">
+                            <div class="stat-label-container">
+                                <span>Elemental Control</span>
+                                <span id="stat-val-elem">95%</span>
+                            </div>
+                            <div class="stat-bar-bg">
+                                <div class="stat-bar-fill" id="bar-elem" style="width: 95%"></div>
+                            </div>
+                        </div>
+
+                        <div class="stat-row">
+                            <div class="stat-label-container">
+                                <span>Defense</span>
+                                <span id="stat-val-def">75%</span>
+                            </div>
+                            <div class="stat-bar-bg">
+                                <div class="stat-bar-fill" id="bar-def" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="char-card-visual">
+                    <img src="https://i.imgur.com/vHq10F1.png" alt="Character Full View" class="char-main-image active" id="char-main-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGIONS SECTION -->
+    <section class="regions" id="regions">
+        <div class="section-header">
+            <span class="section-subtitle">Seven Nations</span>
+            <h2 class="section-title">Explore Teyvat</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="regions-slider">
+            <div class="region-card">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=600" alt="Mondstadt" class="region-bg">
+                <div class="region-overlay">
+                    <span class="region-element">Anemo</span>
+                    <h3>Mondstadt</h3>
+                    <p>The city of freedom that crowns the northeast of Teyvat. Under the protection of the Anemo Archon, Barbatos, the breeze here sings of history and freedom.</p>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=600" alt="Liyue" class="region-bg">
+                <div class="region-overlay">
+                    <span class="region-element">Geo</span>
+                    <h3>Liyue Harbor</h3>
+                    <p>A bountiful harbor that lies in the east of Teyvat. The home of contract, trade, and stone monuments built by Rex Lapis, the Geo Archon.</p>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=600" alt="Inazuma" class="region-bg">
+                <div class="region-overlay">
+                    <span class="region-element">Electro</span>
+                    <h3>Inazuma</h3>
+                    <p>An archipelago situated far in the east, surrounded by storms and lightning. The Electro Archon Raiden Shogun seeks "eternity" within these islands.</p>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80&w=600" alt="Sumeru" class="region-bg">
+                <div class="region-overlay">
+                    <span class="region-element">Dendro</span>
+                    <h3>Sumeru</h3>
+                    <p>The nation of wisdom and nature, where massive rainforests coexist with dry deserts. Governed by Lesser Lord Kusanali, the Dendro Archon.</p>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=600" alt="Fontaine" class="region-bg">
+                <div class="region-overlay">
+                    <span class="region-element">Hydro</span>
+                    <h3>Fontaine</h3>
+                    <p>The nation of justice, technology, and art. Known for its gorgeous waterfalls and underwater diving. Guided by the principles of the Hydro Archon.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GAME FEATURES SECTION -->
+    <section class="features" id="features">
+        <div class="section-header">
+            <span class="section-subtitle">Features</span>
+            <h2 class="section-title">Immersive Gameplay</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <i class="fa-solid fa-fire-burner"></i>
+                </div>
+                <h3>Elemental Combat</h3>
+                <p>Harness the power of Anemo, Pyro, Electro, Cryo, Hydro, Dendro, and Geo to trigger powerful elemental reactions like Vaporize, Melt, Overloaded, and Swirl to defeat monsters.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <h3>Vast Open World</h3>
+                <p>Climb any mountain, swim across rivers, glide over the valleys, and explore spectacular ruins. Discover chests, solve puzzles, and uncover secrets across the lands.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h3>Co-op Adventure</h3>
+                <p>Team up with up to 3 other friends to clear domains, fight challenging bosses, complete quests, and explore Teyvat's landscapes together for richer rewards.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOATING MUSIC PLAYER -->
+    <div class="music-player" id="music-player">
+        <div class="music-disk" id="music-disk">
+            <i class="fa-solid fa-music"></i>
+        </div>
+        <div class="music-controls">
+            <button class="music-btn" onclick="togglePlay()" id="play-btn">
+                <i class="fa-solid fa-play"></i>
+            </button>
+            <div class="music-info">Genshin Main Theme</div>
+        </div>
+        <!-- Embed a clean anime orchestral royalty-free music track -->
+        <audio id="audio-track" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+    </div>
+
+    <!-- VIDEO TRAILER MODAL -->
+    <div class="modal" id="video-modal" onclick="closeModal()">
+        <div class="modal-container" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <!-- Embed standard official trailer -->
+            <iframe id="modal-video-frame" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-compass"></i>
+            </div>
+            <span class="logo-text" style="font-size: 1.8rem;">GENSHIN 2026</span>
+        </div>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Support</a>
+        </div>
+        <div class="footer-socials">
+            <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-discord"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-reddit-alien"></i></a>
+        </div>
+        <p class="copyright">
+            © 2026 Kaythip-GKrit Games. "Genshin Impact" and related logos are trademarks of HoYoverse/miHoYo. All rights reserved.<br>
+            Made with ✦ for educational demonstration purposes.
+        </p>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        // HEADER ANIMATION ON SCROLL
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // AUDIO CONTROLS
+        const audio = document.getElementById('audio-track');
+        const playBtn = document.getElementById('play-btn');
+        const musicPlayer = document.getElementById('music-player');
+        
+        function togglePlay() {
+            if (audio.paused) {
+                audio.play();
+                playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                musicPlayer.classList.add('playing');
+            } else {
+                audio.pause();
+                playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+                musicPlayer.classList.remove('playing');
+            }
+        }
+
+        // TRAILER MODAL CONTROLS
+        const modal = document.getElementById('video-modal');
+        const videoFrame = document.getElementById('modal-video-frame');
+        // Standard high-quality official game trailer
+        const trailerUrl = "https://www.youtube.com/embed/TAlKhARUcoY?autoplay=1";
+
+        function openModal() {
+            modal.classList.add('open');
+            videoFrame.src = trailerUrl;
+        }
+
+        function closeModal() {
+            modal.classList.remove('open');
+            videoFrame.src = "";
+        }
+
+        // CHARACTER SHOWCASE SYSTEM
+        const characters = {
+            traveler: {
+                name: "Traveler",
+                elementName: "Anemo / Wind",
+                icon: "fa-wind",
+                color: "#3fe0cd",
+                weapon: "Sword",
+                region: "Outlander",
+                bio: "A traveler from another world who had their only kin taken away, forcing them to embark on a journey across Teyvat to find the Seven Archons. Possesses the unique ability to command elements without a Vision.",
+                image: "https://i.imgur.com/vHq10F1.png",
+                stats: { atk: 85, elem: 95, def: 75 }
+            },
+            hutao: {
+                name: "Hu Tao",
+                elementName: "Pyro / Fire",
+                icon: "fa-fire",
+                color: "#ff5a36",
+                weapon: "Polearm",
+                region: "Liyue Harbor",
+                bio: "The 77th Director of the Wangsheng Funeral Parlor. Despite her young age, she is the main authority on all funeral proceedings in Liyue. She handles everything with absolute professionalism, eccentricity, and a touch of mischief.",
+                image: "https://i.imgur.com/k6lPqfE.png",
+                stats: { atk: 98, elem: 90, def: 60 }
+            },
+            raiden: {
+                name: "Raiden Shogun",
+                elementName: "Electro / Lightning",
+                icon: "fa-bolt-lightning",
+                color: "#d156ff",
+                weapon: "Polearm / Sword",
+                region: "Inazuma Islands",
+                bio: "The almighty Shogun of the Inazuma Shogunate, she rules her nation with lightning speed and absolute authority. Sheltered within her Plane of Euthymia, she strives to maintain an unchanging 'Eternity' for her citizens.",
+                image: "https://i.imgur.com/D4sTXZ2.png",
+                stats: { atk: 95, elem: 98, def: 80 }
+            },
+            ayaka: {
+                name: "Kamisato Ayaka",
+                elementName: "Cryo / Ice",
+                icon: "fa-snowflake",
+                color: "#56cdff",
+                weapon: "Sword",
+                region: "Inazuma Islands",
+                bio: "Daughter of the Yashiro Commission's Kamisato Clan. Dignified, elegant, and exceptionally skilled in both swordplay and courtly manners, she is beloved by the people of Inazuma as the Shirasagi Himegimi.",
+                image: "https://i.imgur.com/L1D3zW1.png",
+                stats: { atk: 90, elem: 88, def: 70 }
+            }
+        };
+
+        function selectCharacter(key) {
+            // Update Active Tab Button styling
+            const buttons = document.querySelectorAll('.char-tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Find which button corresponds to the key
+            const targetBtn = Array.from(buttons).find(btn => btn.getAttribute('onclick').includes(key));
+            if (targetBtn) targetBtn.classList.add('active');
+
+            const char = characters[key];
+            const activeGlow = document.getElementById('active-glow');
+            const root = document.documentElement;
+
+            // Change active elemental color
+            root.style.setProperty('--active-element-color', char.color);
+
+            // Animate character image out, switch source, animate in
+            const charImg = document.getElementById('char-main-img');
+            charImg.classList.remove('active');
+            
+            setTimeout(() => {
+                charImg.src = char.image;
+                charImg.classList.add('active');
+            }, 300);
+
+            // Update text elements
+            document.getElementById('char-element').innerHTML = `<i class="fa-solid ${char.icon}"></i> <span>${char.elementName}</span>`;
+            document.getElementById('char-name').innerText = char.name;
+            document.getElementById('char-weapon').innerText = char.weapon;
+            document.getElementById('char-region').innerText = char.region;
+            document.getElementById('char-bio').innerText = char.bio;
+
+            // Update Stats Values and Progress Bars
+            document.getElementById('stat-val-atk').innerText = char.stats.atk + '%';
+            document.getElementById('stat-val-elem').innerText = char.stats.elem + '%';
+            document.getElementById('stat-val-def').innerText = char.stats.def + '%';
+
+            document.getElementById('bar-atk').style.width = char.stats.atk + '%';
+            document.getElementById('bar-elem').style.width = char.stats.elem + '%';
+            document.getElementById('bar-def').style.width = char.stats.def + '%';
+        }
+        
+        // Initial setup for the traveler stats animation
+        window.addEventListener('load', () => {
+            selectCharacter('traveler');
+        });
+    </script>
+</body>
+</html>

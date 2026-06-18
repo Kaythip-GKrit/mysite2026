@@ -12,8 +12,11 @@ def info(request):
     return HttpResponse(res_text)
 def home(request):
     return render(request,'home.html',)
+def index(request):
+    return render(request,'index.html',)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('info/', info),
     path('', home),
+    path('index/', index),
 ]

@@ -1,6 +1,22 @@
 # MySite2026
 
     uv run manage.py runserver 0.0.0.0:80
+
+
+## การสร้างโปรเจกต์
+
+    mkdir mysite2026
+    cd mysite2026
+    uv init
+    uv add django
+    uv run django-admin startproject mysite2026
+
+## คำสั่งที่ใช้
+
+    uv run manane.py runserver 0.0.0.0:80
+    uv run manage.py startapp core
+
+
 ## http methods
     GET
     POST

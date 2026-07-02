@@ -1,22 +1,20 @@
-
+from django.conf import settings
+from django.http import JsonResponse
 from django.contrib import admin
 from django.urls import path,include
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse, FileResponse
 from django.shortcuts import render
-def info(request):
-    ip_adress = request.META['REMOTE_ADDR']
-    res_text = f"Your IP Address is :{ip_adress}\n"
-    
-    for k, v in request.headers.items():
-        res_text += f"<p>{k} :{v}</p>"
-    return HttpResponse(res_text)
-def home(request):
-    return render(request,'home.html',)
-def index(request):
-    return render(request,'index.html',)
+
+
+# from . views import *
+from . import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('info/', info),
-    path('', home),
-    path('index/', index),
+    path('info/', views.info),
+    path('', views.home),
+    path('index/', views.index),
+    path('shopping', views.shopping),
+    path('lucksoot/', views.lucksoot_pdf),
+    path('chopee/', include('chopee.urls')),
 ]
